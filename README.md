@@ -46,8 +46,8 @@ kHz.The model was trained from scratch using [Librispeech train-clean-100](http:
 3. Make a list of the file names to use for training/testing
 
    ```command
-   ls wav_data/*.wav | tail -n+10 > train_files.txt
-   ls wav_data/*.wav | head -n10 > test_files.txt
+   ls train-clean-100/wav_data/*.wav | tail -n+10 > train_files.txt
+   ls train-clean-100/wav_data/*.wav | head -n10 > test_files.txt
    ```
 
 3. Train your WaveGlow networks
