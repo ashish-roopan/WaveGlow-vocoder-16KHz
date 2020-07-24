@@ -16,9 +16,7 @@ kHz.The model was trained from scratch using [Librispeech train-clean-100](http:
    git submodule update
    ```
 
-
-
-   2. Install [Apex]
+2. Install [Apex]
     ```
    git clone https://github.com/NVIDIA/apex
    cd apex
@@ -36,6 +34,9 @@ kHz.The model was trained from scratch using [Librispeech train-clean-100](http:
 ## Train the model on Librispeech train-clean-100(16KHz)
 
 1. Download [Librispeech train-clean-100](http://www.openslr.org/resources/12/train-clean-100.tar.gz) dataset.
+   ```
+   wget http://www.openslr.org/resources/12/train-clean-100.tar.gz
+   ```
 
 2. Convert flac files to wav 
    ```run
