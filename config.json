@@ -1,0 +1,44 @@
+%%writefile config.json
+{
+    "train_config": {
+        "fp16_run": true,
+        "output_directory": "/content/gdrive/My Drive/checkpoints/",
+        "epochs": 100000,
+        "learning_rate": 1e-4,
+        "sigma": 1.0,
+        "iters_per_checkpoint": 5000,
+        "batch_size": 1,
+        "seed": 1234,
+        "checkpoint_path": "/content/gdrive/My Drive/checkpoints/waveglow_48000",
+        "with_tensorboard": false
+    },
+    "data_config": {
+        
+        "segment_length": 16000,        
+        "filter_length": 800,
+ 
+        "training_files": "train_files.txt",
+        "sampling_rate": 16000,
+        "hop_length": 200,
+        "win_length": 800,
+        "mel_fmin": 55,
+        "mel_fmax": 7600
+    },
+    "dist_config": {
+        "dist_backend": "nccl",
+        "dist_url": "tcp://localhost:54321"
+    },
+ 
+    "waveglow_config": {
+        "n_mel_channels": 80,
+        "n_flows": 12,
+        "n_group": 8,
+        "n_early_every": 4,
+        "n_early_size": 2,
+        "WN_config": {
+            "n_layers": 8,
+            "n_channels": 256,
+            "kernel_size": 3
+        }
+    }
+}
