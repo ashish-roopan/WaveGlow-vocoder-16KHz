@@ -1,5 +1,4 @@
-%%writefile train.py
-# *****************************************************************************
+*****************************************************************************
 #  Copyright (c) 2018, NVIDIA CORPORATION.  All rights reserved.
 #
 #  Redistribution and use in source and binary forms, with or without
